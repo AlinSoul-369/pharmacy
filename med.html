@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="med.css">
+    <title>Medicine Management System</title>
+</head>
+<body>
+    <div class="main">
+        <div class="title">
+            <h2>------ Medicine Management System ------</h2>
+        </div>
+
+        <div class="inputs">
+            <label>Medicine Name : </label> <br>
+            <input type="text" id="medName"> <br>
+            <label>Company Name : </label> <br>
+            <input type="text" id="comName" > <br>
+            <label>Indications :    </label> <br>
+            <textarea  id="Indications"> </textarea> <br>
+        
+            <label>Mfg.Date : </label> <br>
+            <input type="date" id="fabYear" > <br>
+            <label>Exp.Date : </label> <br>
+            <input type="date" id="expYear" > <br>
+            <label id="quan">Quantity: </label> <br>
+            <input type="number" id="quantity"> <br>
+            <div class="price">
+                <label>price : </label> 
+                <input type="number" onkeyup="calTotalPrice()" id="price"> 
+                <label>taxes : </label> 
+                <input type="number" onkeyup="calTotalPrice()" id="taxes">
+                <label>discounts : </label>  
+                <input type="number" onkeyup="calTotalPrice()" id="discounts"> 
+                <small id="total"> </small>
+            
+            </div>
+            
+            <button id="add" >Add Medicine</button>
+        </div>
+        
+        <div class="outputs">
+
+            <div class="searchBox">
+                <label >Search Medicine:</label> <br>
+                <input type="text" id="search">
+                <div class="BtnSearch">
+                    <button id="SearchByName"    onclick="searchMedicine(this.id)"> Search By Name</button>
+                    <button id="SearchByCompany" onclick="searchMedicine(this.id)"> Search By Company</button>
+                </div>
+
+             <div id="D1"> </div>
+        <table>
+            <tr>
+                <th> id    </th>
+                <th> Name </th>
+                <th> Company </th>
+                <th> Indications </th>
+                <th> Mfg.Date </th>
+                <th> Exp.Date </th>
+                <th> Price </th>
+                <th> Taxes </th>
+                <th> Discounts </th>
+                <th> Total </th>
+                <th> Update </th>
+                <th> Delete </th>
+                
+            </tr>
+            <tbody id="tbody">
+                <tr>
+                    <td>0</td>
+                    <td>a </td>
+                    <td>b </td>
+                    <td>c</td>
+                    <td>2-2-2034 </td>
+                    <td>2-2-3444 </td> 
+                    <td>2 </td>
+                    <td>4 </td>
+                    <td>3 </td>
+                    <td>5 </td>
+                    <td class="u"> <button id="update">Update</button></td> 
+                    <td class="d"> <button id="delete">Delete</button></td>
+                    </tr>
+            </tbody>
+        </table>
+            </div>
+           
+
+
+
+        </div>
+    
+    </div>
+
+
+
+
+
+    <script src="med.js"></script>
+</body>
+</html>
